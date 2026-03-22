@@ -1,6 +1,12 @@
 "use client";
 
-export function Logo({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
+export function Logo({
+  size = "md",
+  variant = "dark",
+}: {
+  size?: "sm" | "md" | "lg";
+  variant?: "dark" | "light";
+}) {
   const sizes = {
     sm: "text-xl",
     md: "text-2xl",
@@ -9,7 +15,9 @@ export function Logo({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
 
   return (
     <span className={`${sizes[size]} font-heading font-bold tracking-tight`}>
-      <span className="text-navy">English</span>
+      <span className={variant === "dark" ? "text-white" : "text-navy"}>
+        English
+      </span>
       <span className="text-amber">4U</span>
     </span>
   );

@@ -44,7 +44,7 @@ export default function GetInvolved() {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           className="text-center"
         >
@@ -59,9 +59,9 @@ export default function GetInvolved() {
               key={card.title}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: i * 0.12, duration: 0.5 }}
-              className="rounded-2xl p-8 bg-cream border border-navy/5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col"
+              className="rounded-2xl p-8 bg-cream border border-navy/5 hover:shadow-lg transition-shadow duration-300 flex flex-col"
             >
               <h3 className="font-heading font-bold text-navy text-xl">
                 {card.title}

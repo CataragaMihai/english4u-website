@@ -18,9 +18,9 @@ function MetricBlock({ metric, index }: { metric: typeof metrics[number]; index:
     <motion.div
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
-      className="bg-navy rounded-2xl p-6 text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+      className="bg-navy rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300"
       ref={ref as React.RefObject<HTMLDivElement>}
     >
       <p className="text-3xl md:text-4xl font-heading font-bold text-amber">
@@ -38,7 +38,7 @@ export default function Impact() {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           className="text-center"
         >
@@ -59,7 +59,7 @@ export default function Impact() {
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-12 text-center text-lg font-serif italic text-navy/80 max-w-3xl mx-auto leading-relaxed"
         >

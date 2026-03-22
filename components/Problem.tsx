@@ -50,15 +50,6 @@ const causes = [
   },
 ];
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.12, duration: 0.5 },
-  }),
-};
-
 export default function Problem() {
   return (
     <section id="problem" className="py-20 md:py-28 bg-cream">
@@ -66,7 +57,7 @@ export default function Problem() {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl font-heading font-bold text-navy text-center">
@@ -86,12 +77,11 @@ export default function Problem() {
           {causes.map((cause, i) => (
             <motion.div
               key={cause.title}
-              custom={i}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
-              variants={cardVariants}
-              className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 border border-navy/5"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ delay: i * 0.12, duration: 0.5 }}
+              className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-shadow duration-300 border border-navy/5"
             >
               <div className="flex items-start gap-4">
                 <div className="shrink-0 mt-1">{cause.icon}</div>
@@ -109,7 +99,7 @@ export default function Problem() {
         <motion.blockquote
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-14 border-l-4 border-teal pl-6 py-4 max-w-3xl mx-auto"
         >

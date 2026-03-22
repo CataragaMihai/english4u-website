@@ -63,7 +63,7 @@ export default function Model() {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           className="text-center"
         >
@@ -82,9 +82,9 @@ export default function Model() {
               key={pillar.title}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: i * 0.15, duration: 0.5 }}
-              className="bg-cream rounded-2xl p-8 text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              className="bg-cream rounded-2xl p-8 text-center hover:shadow-lg transition-shadow duration-300"
             >
               <div className="flex justify-center mb-5">{pillar.icon}</div>
               <h3 className="font-heading font-bold text-navy text-xl">
@@ -101,7 +101,7 @@ export default function Model() {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-20"
         >
@@ -117,7 +117,7 @@ export default function Model() {
                 key={phase.phase}
                 initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ delay: i * 0.15, duration: 0.5 }}
                 className={`relative flex items-start mb-10 ${
                   i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"

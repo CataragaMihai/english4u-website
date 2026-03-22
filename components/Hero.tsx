@@ -30,15 +30,6 @@ function StatItem({ stat }: { stat: typeof stats[number] }) {
   );
 }
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" as const },
-  }),
-};
-
 export default function Hero() {
   return (
     <section
@@ -51,20 +42,18 @@ export default function Hero() {
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-32 md:py-40 text-center">
         <motion.p
-          custom={0}
-          initial="hidden"
-          animate="visible"
-          variants={fadeUp}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0, duration: 0.6, ease: "easeOut" }}
           className="text-teal font-serif italic text-lg md:text-xl mb-6"
         >
           Bridging the language gap, one classroom at a time
         </motion.p>
 
         <motion.h1
-          custom={1}
-          initial="hidden"
-          animate="visible"
-          variants={fadeUp}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15, duration: 0.6, ease: "easeOut" }}
           className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-tight"
         >
           Bridging the Language Gap,{" "}
@@ -72,10 +61,9 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          custom={2}
-          initial="hidden"
-          animate="visible"
-          variants={fadeUp}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
           className="mt-6 text-lg md:text-xl text-white/80 max-w-3xl mx-auto font-body leading-relaxed"
         >
           English4U deploys trained volunteer educators into rural Moldovan
@@ -83,10 +71,9 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          custom={3}
-          initial="hidden"
-          animate="visible"
-          variants={fadeUp}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.45, duration: 0.6, ease: "easeOut" }}
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
@@ -104,10 +91,9 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          custom={4}
-          initial="hidden"
-          animate="visible"
-          variants={fadeUp}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 md:divide-x md:divide-white/20"
         >
           {stats.map((stat) => (

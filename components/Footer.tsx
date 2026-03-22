@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
-            <Logo size="md" />
+            <Logo size="md" variant="dark" />
             <p className="mt-2 text-white/60 font-body text-sm max-w-md">
               Deploying trained volunteer educators into rural Moldovan schools —
               free of charge, grounded in evidence, built for impact.
@@ -44,7 +44,7 @@ export default function Footer() {
               contact@english4u.md
             </a>
             <span className="mx-3">·</span>
-            English4U · Republic of Moldova · 2025
+            English4U · Republic of Moldova · 2026
           </div>
           <p className="text-white/30 text-xs font-body text-center md:text-right">
             Currently seeking founding board members, volunteer educators, and funding partners.

@@ -16,9 +16,9 @@ const config: Config = {
         text: "#1A1A2E",
       },
       fontFamily: {
-        heading: ["var(--font-nunito)", "sans-serif"],
-        body: ["var(--font-nunito-sans)", "sans-serif"],
-        serif: ["var(--font-source-serif)", "serif"],
+        heading: ["var(--font-poppins)", "sans-serif"],
+        body: ["var(--font-poppins)", "sans-serif"],
+        serif: ["var(--font-poppins)", "sans-serif"],
       },
     },
   },
