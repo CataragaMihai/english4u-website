@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #1B3A6B;
+  --amber: #E8A020;
+  --teal: #2A9D78;
+  --cream: #F9F7F2;
+  --text: #1A1A2E;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text);
+  background: #ffffff;
+}
+
+::selection {
+  background: #E8A020;
+  color: #1B3A6B;
+}
