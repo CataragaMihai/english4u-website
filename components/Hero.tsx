@@ -41,19 +41,10 @@ export default function Hero() {
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber/10 rounded-full blur-3xl" />
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-32 md:py-40 text-center">
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0, duration: 0.6, ease: "easeOut" }}
-          className="text-teal font-serif italic text-lg md:text-xl mb-6"
-        >
-          Bridging the language gap, one classroom at a time
-        </motion.p>
-
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.15, duration: 0.6, ease: "easeOut" }}
+          transition={{ delay: 0, duration: 0.6, ease: "easeOut" }}
           className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-tight"
         >
           Bridging the Language Gap,{" "}
